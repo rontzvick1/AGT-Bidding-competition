@@ -164,32 +164,37 @@ class BiddingAgent:
             avg_future = 5
             
         budget_per_round = self.budget / rounds_left
-        is_poor = budget_per_round < 2.0 
+        is_rich = budget_per_round > 2.0 
         bid = 0.0
-        
- 
-        is_good_item = my_valuation >= avg_future
-
+        threshold = 0.5 if is_rich else 0.8
+        is_good_enough = my_valuation >= (avg_future * threshold)
         is_trap = (my_valuation > 14 and self.high_items_seen < 6)
 
         if is_trap:
-            bid = my_valuation * 0.55
-            
-        elif is_good_item:
-            if is_poor:
-                bid = my_valuation * 0.85
+            factor = 0.65 if is_rich else 0.55
+            bid = my_valuation * factor
+        elif is_good_enough:
+            if is_rich:
+                bid = my_valuation 
             else:
-                bid = my_valuation * 0.95 
+                bid = my_valuation * 0.90 
                 
         else:
-            if not is_poor:
-                bid = my_valuation * 0.4 
+            if is_rich:
+                bid = my_valuation * 0.65
             else:
                 bid = 0.0
 
-        if rounds_left <= 3 and self.budget > 0:
-            if my_valuation > 2: 
-                 bid = self.budget 
+        if self.rounds_completed >= 10 and self.budget > 25:
+             bid = my_valuation 
+
+      
+        if rounds_left <= 5 and self.budget > 0:
+            if self.budget >= my_valuation:
+                bid = my_valuation
+            
+            if rounds_left <= 2:
+                 bid = self.budget
         # ============================================================
         # END OF STRATEGY IMPLEMENTATION
         # ============================================================
