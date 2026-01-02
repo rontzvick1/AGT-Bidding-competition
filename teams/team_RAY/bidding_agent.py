@@ -61,22 +61,7 @@ class BiddingAgent:
         self.rounds_completed = 0
         self.total_rounds = 15  # Always 15 rounds per game
         
-        # TODO: Add your custom state variables here
-        # Examples:
-        # self.price_history = []          # Track observed prices
-        # self.opponent_wins = {opp: [] for opp in opponent_teams}  # Track which opponents win what
-        # self.opponent_bids = {opp: [] for opp in opponent_teams}  # Infer opponent bidding patterns
-        # self.beliefs = {opp: {} for opp in opponent_teams}        # Bayesian beliefs per opponent
-        # self.high_value_threshold = 12.0  # Classify items
-        # self.low_value_threshold = 8.0
-        self.rounds_completed = 0
-        self.total_rounds = 15
-        
-        # TODO: Pre-compute any strategy parameters
-        # Examples:
-        # self.avg_valuation = sum(valuation_vector.values()) / len(valuation_vector)
-        # self.max_valuation = max(valuation_vector.values())
-        # self.min_valuation = min(valuation_vector.values())
+      
         self.remaining_vals = list(valuation_vector.values())
         self.opponents_budgets = {opp: 60.0 for opp in opponent_teams}
         self.high_items_seen = 0
@@ -122,44 +107,17 @@ class BiddingAgent:
         """
         # System updates (DO NOT REMOVE)
         self._update_available_budget(item_id, winning_team, price_paid)
-        
-        if winning_team == self.team_id:
-            self.utility += (self.valuation_vector[item_id] - price_paid)
-        
         self.rounds_completed += 1
-        
-        # TODO: Implement your learning/adaptation logic here
-        # Examples:
+        # ============================================================
+        my_valuation = self.valuation_vector[item_id]
+        if my_valuation in self.remaining_vals:
+            self.remaining_vals.remove(my_valuation)
+            
         if winning_team in self.opponents_budgets:
             self.opponents_budgets[winning_team] = max(0.0, self.opponents_budgets[winning_team] - price_paid)
-        # Track price history
-        # if price_paid > 0:
-        #     self.price_history.append(price_paid)
-        item_val = self.valuation_vector[item_id]
-        if item_val in self.remaining_vals:
-            self.remaining_vals.remove(item_val)
-        # Track opponent performance
-        # if winning_team and winning_team != self.team_id:
-        #     self.opponent_wins[winning_team] = \
-        #         self.opponent_wins.get(winning_team, 0) + 1
+
         if price_paid > 11:
             self.high_items_seen += 1
-        # Update beliefs about market competitiveness
-        # if self.price_history:
-        #     self.avg_market_price = sum(self.price_history) / len(self.price_history)
-        if item_val > 0:
-            ratio = price_paid / item_val
-            if ratio > 0.85:
-                self.market_aggressiveness = 1.2
-            elif ratio < 0.4:
-                self.market_aggressiveness = 0.8 
-        
-        
-        # Bayesian belief updates
-        # if winning_team and price_paid > 0:
-        #     # Update beliefs about winner's valuation
-        #     # They bid at least price_paid + epsilon
-        #     pass
         
         return True
     
@@ -192,126 +150,76 @@ class BiddingAgent:
         """
         # Get your valuation for this item
         my_valuation = self.valuation_vector.get(item_id, 0)
-        
+        rounds_left = self.total_rounds - self.rounds_completed
         # Early exit if no value or no budget
-        if my_valuation <= 0 or self.budget <= 0:
+        if my_valuation <= 0 or self.budget <= 0.01 or rounds_left <= 0:
             return 0.0
         
-        # Calculate rounds remaining
-        rounds_remaining = self.total_rounds - self.rounds_completed
-        if rounds_remaining <= 0:
-            return 0.0
+        budget_per_round = self.budget / rounds_left
+        is_rich = budget_per_round > 4.0
+        bid = 0.0
         
         # ============================================================
         # TODO: IMPLEMENT YOUR BIDDING STRATEGY HERE
         # ============================================================
-        if my_valuation < 3 and rounds_remaining > 3:
-            return my_valuation
-        avg_future = sum(self.remaining_vals) / len(self.remaining_vals) if self.remaining_vals else 5
-        is_good_opportunity = my_valuation > avg_future
-        likely_common_high = False
-        if my_valuation > 14 and self.high_items_seen < 6:
-            likely_common_high = True
-        bid = 0.0
-        
-        if likely_common_high:
-            bid = my_valuation * 0.55 
-            
-        elif is_good_opportunity:
-            base_aggression = 0.85 
-            if self.market_aggressiveness < 1.0:
-                base_aggression = 0.75
-            
-            bid = my_valuation * base_aggression
-            
+        if self.rounds_completed < 3:
+            if my_valuation > 8: 
+                bid = my_valuation * 1.05
+            elif my_valuation > 4:
+                bid =  my_valuation * 0.8
         else:
-            bid = my_valuation * 0.4
-
-        if self.opponents_budgets:
-            richest_opponent_budget = max(self.opponents_budgets.values())
-            smart_cap = richest_opponent_budget + 1.1 
-            bid = min(bid, smart_cap)
-        bid = min(bid, self.budget)
-        bid = min(bid, my_valuation)
-        # Example Strategy 1: Simple Truthful Bidding
-        # bid = my_valuation
-        
-        # Example Strategy 2: Budget Pacing
-        # budget_per_round = self.budget / rounds_remaining
-        # bid = min(my_valuation, budget_per_round * 1.5)
-        
-        # Example Strategy 3: Value-Based Shading
-        # if my_valuation > 12:
-        #     bid = my_valuation * 0.9  # High value: bid aggressively
-        # elif my_valuation > 8:
-        #     bid = my_valuation * 0.7  # Medium value: bid moderately
-        # else:
-        #     bid = my_valuation * 0.5  # Low value: bid conservatively
-        
-        # Example Strategy 4: Adaptive Based on Observations
-        # if hasattr(self, 'price_history') and self.price_history:
-        #     avg_price = sum(self.price_history) / len(self.price_history)
-        #     if my_valuation > avg_price * 1.2:
-        #         bid = my_valuation * 0.85  # Competitive item
-        #     else:
-        #         bid = my_valuation * 0.6   # Less competitive
-        # else:
-        #     bid = my_valuation * 0.7
-        
-        # Example Strategy 5: End-Game Aggression
-        # progress = self.rounds_completed / self.total_rounds
-        # if progress > 0.7:  # Last 30% of game
-        #     bid = my_valuation * 0.9  # More aggressive
-        # else:
-        #     bid = my_valuation * 0.7
-        
-        # PLACEHOLDER: Simple truthful bidding (REPLACE THIS!)
-        # Bid 80% of valuation
-        if rounds_remaining <= 3:
-            if self.budget >= my_valuation:
-                bid = my_valuation
+            if len(self.remaining_vals) > 0:
+                avg_future = sum(self.remaining_vals) / len(self.remaining_vals)
             else:
-                bid = self.budget
+                avg_future = 5
+
+            threshold_factor = 0.7 if is_rich else 1.0
+            is_opportunity = my_valuation > (avg_future * threshold_factor)
+        
+   
+            is_trap = (my_valuation > 14 and self.high_items_seen < 6)
+        
+            if is_trap:
+                factor = 0.65 if is_rich else 0.55
+                bid = my_valuation * factor
+                
+            elif is_opportunity:
+                aggression = 0.95 if is_rich else 0.85
+                bid = my_valuation * aggression
+            else:
+                if is_rich and my_valuation > 2: 
+                    bid = my_valuation * 0.4
+                else:
+                    bid = 0.0
+
+        
+            if self.opponents_budgets:
+                richest_opp = max(self.opponents_budgets.values())
+            
+                if not is_rich: 
+                    bid = min(bid, richest_opp + 1.5)
+
+            
+            if rounds_left <= 4 and self.budget > 0:
+                if self.budget >= my_valuation:
+                    bid = my_valuation
+                if rounds_left <= 2 and self.budget > my_valuation:
+                    bid = self.budget
+
+        if my_valuation > 2.0: 
+            bid = max(bid, 1.0)
+       
+            if is_rich:
+                bid = max(bid, 2.0)
         # ============================================================
         # END OF STRATEGY IMPLEMENTATION
         # ============================================================
-        
+        bid = min(bid, my_valuation)
         # Ensure bid is valid (non-negative and within budget)
         bid = max(0.0, min(bid, self.budget))
         
         return float(bid)
-    
-    # ================================================================
-    # OPTIONAL: Helper methods for your strategy
-    # ================================================================
-    
-    # TODO: Add any helper methods you need
-    # Examples:
-    
-    # def _classify_item_value(self, valuation: float) -> str:
-    #     """Classify item as high, medium, or low value"""
-    #     if valuation > self.high_value_threshold:
-    #         return "high"
-    #     elif valuation > self.low_value_threshold:
-    #         return "medium"
-    #     else:
-    #         return "low"
-    
-    # def _estimate_competition(self, item_id: str) -> float:
-    #     """Estimate how competitive this auction will be"""
-    #     # Based on price history, opponent wins, etc.
-    #     pass
-    
-    # def _calculate_budget_constraint(self) -> float:
-    #     """Calculate maximum bid based on budget constraints"""
-    #     rounds_remaining = self.total_rounds - self.rounds_completed
-    #     return self.budget / max(1, rounds_remaining) * 2.0
-    
-    # def _should_bid_aggressively(self, valuation: float) -> bool:
-    #     """Decide if we should bid aggressively for this item"""
-    #     # Based on game state, valuation, budget, etc.
-    #     pass
-
+   
 
 # ====================================================================
 # NOTES AND TIPS
