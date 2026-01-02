@@ -155,62 +155,41 @@ class BiddingAgent:
         if my_valuation <= 0 or self.budget <= 0.01 or rounds_left <= 0:
             return 0.0
         
-        budget_per_round = self.budget / rounds_left
-        is_rich = budget_per_round > 4.0
-        bid = 0.0
-        
         # ============================================================
         # TODO: IMPLEMENT YOUR BIDDING STRATEGY HERE
         # ============================================================
-        if self.rounds_completed < 3:
-            if my_valuation > 8: 
-                bid = my_valuation * 1.05
-            elif my_valuation > 4:
-                bid =  my_valuation * 0.8
+        if len(self.remaining_vals) > 0:
+            avg_future = sum(self.remaining_vals) / len(self.remaining_vals)
         else:
-            if len(self.remaining_vals) > 0:
-                avg_future = sum(self.remaining_vals) / len(self.remaining_vals)
-            else:
-                avg_future = 5
+            avg_future = 5
+            
+        budget_per_round = self.budget / rounds_left
+        is_poor = budget_per_round < 2.0 
+        bid = 0.0
+        
+ 
+        is_good_item = my_valuation >= avg_future
 
-            threshold_factor = 0.7 if is_rich else 1.0
-            is_opportunity = my_valuation > (avg_future * threshold_factor)
-        
-   
-            is_trap = (my_valuation > 14 and self.high_items_seen < 6)
-        
-            if is_trap:
-                factor = 0.65 if is_rich else 0.55
-                bid = my_valuation * factor
+        is_trap = (my_valuation > 14 and self.high_items_seen < 6)
+
+        if is_trap:
+            bid = my_valuation * 0.55
+            
+        elif is_good_item:
+            if is_poor:
+                bid = my_valuation * 0.85
+            else:
+                bid = my_valuation * 0.95 
                 
-            elif is_opportunity:
-                aggression = 0.95 if is_rich else 0.85
-                bid = my_valuation * aggression
+        else:
+            if not is_poor:
+                bid = my_valuation * 0.4 
             else:
-                if is_rich and my_valuation > 2: 
-                    bid = my_valuation * 0.4
-                else:
-                    bid = 0.0
+                bid = 0.0
 
-        
-            if self.opponents_budgets:
-                richest_opp = max(self.opponents_budgets.values())
-            
-                if not is_rich: 
-                    bid = min(bid, richest_opp + 1.5)
-
-            
-            if rounds_left <= 4 and self.budget > 0:
-                if self.budget >= my_valuation:
-                    bid = my_valuation
-                if rounds_left <= 2 and self.budget > my_valuation:
-                    bid = self.budget
-
-        if my_valuation > 2.0: 
-            bid = max(bid, 1.0)
-       
-            if is_rich:
-                bid = max(bid, 2.0)
+        if rounds_left <= 3 and self.budget > 0:
+            if my_valuation > 2: 
+                 bid = self.budget 
         # ============================================================
         # END OF STRATEGY IMPLEMENTATION
         # ============================================================
