@@ -158,42 +158,38 @@ class BiddingAgent:
         # ============================================================
         # TODO: IMPLEMENT YOUR BIDDING STRATEGY HERE
         # ============================================================
-        if len(self.remaining_vals) > 0:
-            avg_future = sum(self.remaining_vals) / len(self.remaining_vals)
-        else:
-            avg_future = 5
+        
             
         budget_per_round = self.budget / rounds_left
         is_rich = budget_per_round > 2.0 
+        is_panic_spend = (self.rounds_completed > 7 and self.budget > 25)
         bid = 0.0
-        threshold = 0.5 if is_rich else 0.8
-        is_good_enough = my_valuation >= (avg_future * threshold)
-        is_trap = (my_valuation > 14 and self.high_items_seen < 6)
-
-        if is_trap:
-            factor = 0.65 if is_rich else 0.55
-            bid = my_valuation * factor
-        elif is_good_enough:
-            if is_rich:
-                bid = my_valuation 
-            else:
-                bid = my_valuation * 0.90 
-                
-        else:
-            if is_rich:
-                bid = my_valuation * 0.65
+        if is_panic_spend or is_rich:             
+            if my_valuation > 1:
+                bid = my_valuation*0.99
             else:
                 bid = 0.0
-
-        if self.rounds_completed >= 10 and self.budget > 25:
-             bid = my_valuation 
-
-      
-        if rounds_left <= 5 and self.budget > 0:
-            if self.budget >= my_valuation:
-                bid = my_valuation
+                
+        else:
+        
             
-            if rounds_left <= 2:
+            if len(self.remaining_vals) > 0:
+                avg_future = sum(self.remaining_vals) / len(self.remaining_vals)
+            else:
+                avg_future = 5
+      
+            if my_valuation >= avg_future:
+                bid = my_valuation * 0.9
+            elif my_valuation >= avg_future * 0.6:
+                bid = my_valuation * 0.5
+            else:
+                bid = 0.0
+        if rounds_left <= 3 and self.budget > 0:
+            
+             if my_valuation > 1:
+                bid = min(self.budget, my_valuation)
+          
+             if rounds_left == 1 and my_valuation > 0:
                  bid = self.budget
         # ============================================================
         # END OF STRATEGY IMPLEMENTATION
