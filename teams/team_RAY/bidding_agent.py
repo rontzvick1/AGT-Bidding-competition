@@ -207,7 +207,7 @@ class BiddingAgent:
         # ============================================================
         if my_valuation < 3 and rounds_remaining > 3:
             return my_valuation
-        avg_future = statistics.mean(self.remaining_vals) if self.remaining_vals else 5
+        avg_future = sum(self.remaining_vals) / len(self.remaining_vals) if self.remaining_vals else 5
         is_good_opportunity = my_valuation > avg_future
         likely_common_high = False
         if my_valuation > 14 and self.high_items_seen < 6:
