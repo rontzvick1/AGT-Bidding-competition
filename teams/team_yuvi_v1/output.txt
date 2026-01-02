@@ -1,0 +1,473 @@
+{'your_agent': 19.25, 'budget_aware_bidder': 8.97, 'random_bidder': 14.39, 'strategic_bidder': 14.07, 'truthful_bidder': 15.22}
+2026-01-02 14:51:36,453 - INFO - Winner: your_agent, Price: 15.22
+2026-01-02 14:51:36,453 - INFO - Winner: your_agent, Price: 15.22, Remaining budget: 29.31
+2026-01-02 14:51:37,452 - INFO - === Round 5/15: Item item_18 ===
+2026-01-02 14:51:37,650 - DEBUG - Team your_agent: Bid 16.23 in 0.000s
+2026-01-02 14:51:37,650 - DEBUG - Team your_agent: Bid=16.23, Budget=29.31, Time=0.000s
+2026-01-02 14:51:37,920 - DEBUG - Team budget_aware_bidder: Bid 12.82 in 0.000s
+2026-01-02 14:51:37,920 - DEBUG - Team budget_aware_bidder: Bid=12.82, Budget=60.00, Time=0.000s    
+2026-01-02 14:51:38,129 - DEBUG - Team random_bidder: Bid 3.47 in 0.000s
+2026-01-02 14:51:38,129 - DEBUG - Team random_bidder: Bid=3.47, Budget=60.00, Time=0.000s
+2026-01-02 14:51:38,341 - DEBUG - Team strategic_bidder: Bid 9.01 in 0.000s
+2026-01-02 14:51:38,341 - DEBUG - Team strategic_bidder: Bid=9.01, Budget=60.00, Time=0.000s        
+2026-01-02 14:51:38,558 - DEBUG - Team truthful_bidder: Bid 14.96 in 0.000s
+2026-01-02 14:51:38,559 - DEBUG - Team truthful_bidder: Bid=14.96, Budget=47.72, Time=0.000s        
+2026-01-02 14:51:38,559 - INFO - Round 5: Auctioning item_18
+2026-01-02 14:51:38,559 - DEBUG - Validated bids: {'your_agent': 16.23, 'budget_aware_bidder': 12.82, 'random_bidder': 3.47, 'strategic_bidder': 9.01, 'truthful_bidder': 14.96}
+2026-01-02 14:51:38,560 - INFO - Winner: your_agent, Price: 14.96
+2026-01-02 14:51:38,560 - INFO - Winner: your_agent, Price: 14.96, Remaining budget: 14.35
+2026-01-02 14:51:39,537 - INFO - === Round 6/15: Item item_4 ===
+2026-01-02 14:51:39,738 - DEBUG - Team your_agent: Bid 1.74 in 0.000s
+2026-01-02 14:51:39,738 - DEBUG - Team your_agent: Bid=1.74, Budget=14.35, Time=0.000s
+2026-01-02 14:51:39,955 - DEBUG - Team budget_aware_bidder: Bid 5.23 in 0.000s
+2026-01-02 14:51:39,955 - DEBUG - Team budget_aware_bidder: Bid=5.23, Budget=60.00, Time=0.000s     
+2026-01-02 14:51:40,164 - DEBUG - Team random_bidder: Bid 1.83 in 0.000s
+2026-01-02 14:51:40,165 - DEBUG - Team random_bidder: Bid=1.83, Budget=60.00, Time=0.000s
+2026-01-02 14:51:40,377 - DEBUG - Team strategic_bidder: Bid 4.81 in 0.000s
+2026-01-02 14:51:40,377 - DEBUG - Team strategic_bidder: Bid=4.81, Budget=60.00, Time=0.000s        
+2026-01-02 14:51:40,590 - DEBUG - Team truthful_bidder: Bid 5.10 in 0.000s
+2026-01-02 14:51:40,590 - DEBUG - Team truthful_bidder: Bid=5.10, Budget=47.72, Time=0.000s
+2026-01-02 14:51:40,592 - INFO - Round 6: Auctioning item_4
+2026-01-02 14:51:40,592 - DEBUG - Validated bids: {'your_agent': 1.74, 'budget_aware_bidder': 5.23, 'random_bidder': 1.83, 'strategic_bidder': 4.81, 'truthful_bidder': 5.1}
+2026-01-02 14:51:40,592 - INFO - Winner: budget_aware_bidder, Price: 5.10
+2026-01-02 14:51:40,592 - INFO - Winner: budget_aware_bidder, Price: 5.10, Remaining budget: 54.90  
+2026-01-02 14:51:41,574 - INFO - === Round 7/15: Item item_12 ===
+2026-01-02 14:51:41,773 - DEBUG - Team your_agent: Bid 5.40 in 0.000s
+2026-01-02 14:51:41,773 - DEBUG - Team your_agent: Bid=5.40, Budget=14.35, Time=0.000s
+2026-01-02 14:51:41,986 - DEBUG - Team budget_aware_bidder: Bid 16.10 in 0.000s
+2026-01-02 14:51:41,986 - DEBUG - Team budget_aware_bidder: Bid=16.10, Budget=54.90, Time=0.000s    
+2026-01-02 14:51:42,196 - DEBUG - Team random_bidder: Bid 0.06 in 0.000s
+2026-01-02 14:51:42,196 - DEBUG - Team random_bidder: Bid=0.06, Budget=60.00, Time=0.000s
+2026-01-02 14:51:42,413 - DEBUG - Team strategic_bidder: Bid 2.38 in 0.000s
+2026-01-02 14:51:42,413 - DEBUG - Team strategic_bidder: Bid=2.38, Budget=60.00, Time=0.000s        
+2026-01-02 14:51:42,623 - DEBUG - Team truthful_bidder: Bid 6.11 in 0.000s
+2026-01-02 14:51:42,624 - DEBUG - Team truthful_bidder: Bid=6.11, Budget=47.72, Time=0.000s
+2026-01-02 14:51:42,624 - INFO - Round 7: Auctioning item_12
+2026-01-02 14:51:42,624 - DEBUG - Validated bids: {'your_agent': 5.4, 'budget_aware_bidder': 16.1, 'random_bidder': 0.06, 'strategic_bidder': 2.38, 'truthful_bidder': 6.11}
+2026-01-02 14:51:42,624 - INFO - Winner: budget_aware_bidder, Price: 6.11
+2026-01-02 14:51:42,624 - INFO - Winner: budget_aware_bidder, Price: 6.11, Remaining budget: 48.79  
+2026-01-02 14:51:43,605 - INFO - === Round 8/15: Item item_19 ===
+2026-01-02 14:51:43,815 - DEBUG - Team your_agent: Bid 1.15 in 0.000s
+2026-01-02 14:51:43,815 - DEBUG - Team your_agent: Bid=1.15, Budget=14.35, Time=0.000s
+2026-01-02 14:51:44,028 - DEBUG - Team budget_aware_bidder: Bid 6.45 in 0.000s
+2026-01-02 14:51:44,029 - DEBUG - Team budget_aware_bidder: Bid=6.45, Budget=48.79, Time=0.000s     
+2026-01-02 14:51:44,226 - DEBUG - Team random_bidder: Bid 2.41 in 0.000s
+2026-01-02 14:51:44,227 - DEBUG - Team random_bidder: Bid=2.41, Budget=60.00, Time=0.000s
+2026-01-02 14:51:44,441 - DEBUG - Team strategic_bidder: Bid 4.14 in 0.000s
+2026-01-02 14:51:44,441 - DEBUG - Team strategic_bidder: Bid=4.14, Budget=60.00, Time=0.000s        
+2026-01-02 14:51:44,660 - DEBUG - Team truthful_bidder: Bid 2.14 in 0.000s
+2026-01-02 14:51:44,660 - DEBUG - Team truthful_bidder: Bid=2.14, Budget=47.72, Time=0.000s
+2026-01-02 14:51:44,660 - INFO - Round 8: Auctioning item_19
+2026-01-02 14:51:44,662 - DEBUG - Validated bids: {'your_agent': 1.15, 'budget_aware_bidder': 6.45, 'random_bidder': 2.41, 'strategic_bidder': 4.14, 'truthful_bidder': 2.14}
+2026-01-02 14:51:44,662 - INFO - Winner: budget_aware_bidder, Price: 4.14
+2026-01-02 14:51:44,662 - INFO - Winner: budget_aware_bidder, Price: 4.14, Remaining budget: 44.65  
+2026-01-02 14:51:45,643 - INFO - === Round 9/15: Item item_13 ===
+2026-01-02 14:51:45,846 - DEBUG - Team your_agent: Bid 3.16 in 0.000s
+2026-01-02 14:51:45,846 - DEBUG - Team your_agent: Bid=3.16, Budget=14.35, Time=0.000s
+2026-01-02 14:51:46,060 - DEBUG - Team budget_aware_bidder: Bid 12.73 in 0.000s
+2026-01-02 14:51:46,060 - DEBUG - Team budget_aware_bidder: Bid=12.73, Budget=44.65, Time=0.000s    
+2026-01-02 14:51:46,270 - DEBUG - Team random_bidder: Bid 7.37 in 0.000s
+2026-01-02 14:51:46,270 - DEBUG - Team random_bidder: Bid=7.37, Budget=60.00, Time=0.000s
+2026-01-02 14:51:46,488 - DEBUG - Team strategic_bidder: Bid 9.71 in 0.000s
+2026-01-02 14:51:46,488 - DEBUG - Team strategic_bidder: Bid=9.71, Budget=60.00, Time=0.000s        
+2026-01-02 14:51:46,714 - DEBUG - Team truthful_bidder: Bid 14.09 in 0.000s
+2026-01-02 14:51:46,714 - DEBUG - Team truthful_bidder: Bid=14.09, Budget=47.72, Time=0.000s        
+2026-01-02 14:51:46,715 - INFO - Round 9: Auctioning item_13
+2026-01-02 14:51:46,715 - DEBUG - Validated bids: {'your_agent': 3.16, 'budget_aware_bidder': 12.73, 'random_bidder': 7.37, 'strategic_bidder': 9.71, 'truthful_bidder': 14.09}
+2026-01-02 14:51:46,715 - INFO - Winner: truthful_bidder, Price: 12.73
+2026-01-02 14:51:46,715 - INFO - Winner: truthful_bidder, Price: 12.73, Remaining budget: 34.99     
+2026-01-02 14:51:47,690 - INFO - === Round 10/15: Item item_5 ===
+2026-01-02 14:51:47,898 - DEBUG - Team your_agent: Bid 11.42 in 0.000s
+2026-01-02 14:51:47,898 - DEBUG - Team your_agent: Bid=11.42, Budget=14.35, Time=0.000s
+2026-01-02 14:51:48,110 - DEBUG - Team budget_aware_bidder: Bid 15.25 in 0.000s
+2026-01-02 14:51:48,110 - DEBUG - Team budget_aware_bidder: Bid=15.25, Budget=44.65, Time=0.000s    
+2026-01-02 14:51:48,319 - DEBUG - Team random_bidder: Bid 4.02 in 0.000s
+2026-01-02 14:51:48,319 - DEBUG - Team random_bidder: Bid=4.02, Budget=60.00, Time=0.000s
+2026-01-02 14:51:48,533 - DEBUG - Team strategic_bidder: Bid 1.85 in 0.000s
+2026-01-02 14:51:48,533 - DEBUG - Team strategic_bidder: Bid=1.85, Budget=60.00, Time=0.000s        
+2026-01-02 14:51:48,745 - DEBUG - Team truthful_bidder: Bid 5.70 in 0.000s
+2026-01-02 14:51:48,746 - DEBUG - Team truthful_bidder: Bid=5.70, Budget=34.99, Time=0.000s
+2026-01-02 14:51:48,747 - INFO - Round 10: Auctioning item_5
+2026-01-02 14:51:48,747 - DEBUG - Validated bids: {'your_agent': 11.42, 'budget_aware_bidder': 15.25, 'random_bidder': 4.02, 'strategic_bidder': 1.85, 'truthful_bidder': 5.7}
+2026-01-02 14:51:48,747 - INFO - Winner: budget_aware_bidder, Price: 11.42
+2026-01-02 14:51:48,747 - INFO - Winner: budget_aware_bidder, Price: 11.42, Remaining budget: 33.23 
+2026-01-02 14:51:49,721 - INFO - === Round 11/15: Item item_15 ===
+2026-01-02 14:51:49,926 - DEBUG - Team your_agent: Bid 8.17 in 0.000s
+2026-01-02 14:51:49,926 - DEBUG - Team your_agent: Bid=8.17, Budget=14.35, Time=0.000s
+2026-01-02 14:51:50,132 - DEBUG - Team budget_aware_bidder: Bid 3.65 in 0.000s
+2026-01-02 14:51:50,134 - DEBUG - Team budget_aware_bidder: Bid=3.65, Budget=33.23, Time=0.000s     
+2026-01-02 14:51:50,343 - DEBUG - Team random_bidder: Bid 5.62 in 0.000s
+2026-01-02 14:51:50,343 - DEBUG - Team random_bidder: Bid=5.62, Budget=60.00, Time=0.000s
+2026-01-02 14:51:50,555 - DEBUG - Team strategic_bidder: Bid 17.55 in 0.000s
+2026-01-02 14:51:50,556 - DEBUG - Team strategic_bidder: Bid=17.55, Budget=60.00, Time=0.000s       
+2026-01-02 14:51:50,766 - DEBUG - Team truthful_bidder: Bid 12.40 in 0.000s
+2026-01-02 14:51:50,766 - DEBUG - Team truthful_bidder: Bid=12.40, Budget=34.99, Time=0.000s        
+2026-01-02 14:51:50,767 - INFO - Round 11: Auctioning item_15
+2026-01-02 14:51:50,767 - DEBUG - Validated bids: {'your_agent': 8.17, 'budget_aware_bidder': 3.65, 'random_bidder': 5.62, 'strategic_bidder': 17.55, 'truthful_bidder': 12.4}
+2026-01-02 14:51:50,767 - INFO - Winner: strategic_bidder, Price: 12.40
+2026-01-02 14:51:50,767 - INFO - Winner: strategic_bidder, Price: 12.40, Remaining budget: 47.60    
+2026-01-02 14:51:51,757 - INFO - === Round 12/15: Item item_17 ===
+2026-01-02 14:51:51,964 - DEBUG - Team your_agent: Bid 6.26 in 0.000s
+2026-01-02 14:51:51,964 - DEBUG - Team your_agent: Bid=6.26, Budget=14.35, Time=0.000s
+2026-01-02 14:51:52,179 - DEBUG - Team budget_aware_bidder: Bid 6.79 in 0.000s
+2026-01-02 14:51:52,179 - DEBUG - Team budget_aware_bidder: Bid=6.79, Budget=33.23, Time=0.000s     
+2026-01-02 14:51:52,395 - DEBUG - Team random_bidder: Bid 4.27 in 0.000s
+2026-01-02 14:51:52,396 - DEBUG - Team random_bidder: Bid=4.27, Budget=60.00, Time=0.000s
+2026-01-02 14:51:52,609 - DEBUG - Team strategic_bidder: Bid 15.36 in 0.000s
+2026-01-02 14:51:52,609 - DEBUG - Team strategic_bidder: Bid=15.36, Budget=47.60, Time=0.000s       
+2026-01-02 14:51:52,821 - DEBUG - Team truthful_bidder: Bid 9.72 in 0.000s
+2026-01-02 14:51:52,822 - DEBUG - Team truthful_bidder: Bid=9.72, Budget=34.99, Time=0.000s
+2026-01-02 14:51:52,822 - INFO - Round 12: Auctioning item_17
+2026-01-02 14:51:52,822 - DEBUG - Validated bids: {'your_agent': 6.26, 'budget_aware_bidder': 6.79, 'random_bidder': 4.27, 'strategic_bidder': 15.36, 'truthful_bidder': 9.72}
+2026-01-02 14:51:52,822 - INFO - Winner: strategic_bidder, Price: 9.72
+2026-01-02 14:51:52,822 - INFO - Winner: strategic_bidder, Price: 9.72, Remaining budget: 37.88     
+2026-01-02 14:51:53,798 - INFO - === Round 13/15: Item item_10 ===
+2026-01-02 14:51:53,999 - DEBUG - Team your_agent: Bid 9.77 in 0.000s
+2026-01-02 14:51:53,999 - DEBUG - Team your_agent: Bid=9.77, Budget=14.35, Time=0.000s
+2026-01-02 14:51:54,210 - DEBUG - Team budget_aware_bidder: Bid 15.24 in 0.000s
+2026-01-02 14:51:54,211 - DEBUG - Team budget_aware_bidder: Bid=15.24, Budget=33.23, Time=0.000s    
+2026-01-02 14:51:54,424 - DEBUG - Team random_bidder: Bid 7.56 in 0.000s
+2026-01-02 14:51:54,425 - DEBUG - Team random_bidder: Bid=7.56, Budget=60.00, Time=0.000s
+2026-01-02 14:51:54,635 - DEBUG - Team strategic_bidder: Bid 16.04 in 0.000s
+2026-01-02 14:51:54,635 - DEBUG - Team strategic_bidder: Bid=16.04, Budget=37.88, Time=0.000s       
+2026-01-02 14:51:54,848 - DEBUG - Team truthful_bidder: Bid 15.99 in 0.000s
+2026-01-02 14:51:54,849 - DEBUG - Team truthful_bidder: Bid=15.99, Budget=34.99, Time=0.000s        
+2026-01-02 14:51:54,849 - INFO - Round 13: Auctioning item_10
+2026-01-02 14:51:54,849 - DEBUG - Validated bids: {'your_agent': 9.77, 'budget_aware_bidder': 15.24, 'random_bidder': 7.56, 'strategic_bidder': 16.04, 'truthful_bidder': 15.99}
+2026-01-02 14:51:54,849 - INFO - Winner: strategic_bidder, Price: 15.99
+2026-01-02 14:51:54,850 - INFO - Winner: strategic_bidder, Price: 15.99, Remaining budget: 21.89    
+2026-01-02 14:51:55,825 - INFO - === Round 14/15: Item item_11 ===
+2026-01-02 14:51:56,029 - DEBUG - Team your_agent: Bid 9.23 in 0.000s
+2026-01-02 14:51:56,029 - DEBUG - Team your_agent: Bid=9.23, Budget=14.35, Time=0.000s
+2026-01-02 14:51:56,243 - DEBUG - Team budget_aware_bidder: Bid 18.10 in 0.000s
+2026-01-02 14:51:56,243 - DEBUG - Team budget_aware_bidder: Bid=18.10, Budget=33.23, Time=0.000s    
+2026-01-02 14:51:56,459 - DEBUG - Team random_bidder: Bid 0.12 in 0.000s
+2026-01-02 14:51:56,459 - DEBUG - Team random_bidder: Bid=0.12, Budget=60.00, Time=0.000s
+2026-01-02 14:51:56,676 - DEBUG - Team strategic_bidder: Bid 16.11 in 0.000s
+2026-01-02 14:51:56,677 - DEBUG - Team strategic_bidder: Bid=16.11, Budget=21.89, Time=0.000s       
+2026-01-02 14:51:56,891 - DEBUG - Team truthful_bidder: Bid 7.91 in 0.000s
+2026-01-02 14:51:56,892 - DEBUG - Team truthful_bidder: Bid=7.91, Budget=34.99, Time=0.000s
+2026-01-02 14:51:56,892 - INFO - Round 14: Auctioning item_11
+2026-01-02 14:51:56,892 - DEBUG - Validated bids: {'your_agent': 9.23, 'budget_aware_bidder': 18.1, 'random_bidder': 0.12, 'strategic_bidder': 16.11, 'truthful_bidder': 7.91}
+2026-01-02 14:51:56,892 - INFO - Winner: budget_aware_bidder, Price: 16.11
+2026-01-02 14:51:56,892 - INFO - Winner: budget_aware_bidder, Price: 16.11, Remaining budget: 17.12 
+2026-01-02 14:51:57,857 - INFO - === Round 15/15: Item item_7 ===
+2026-01-02 14:51:58,057 - DEBUG - Team your_agent: Bid 7.61 in 0.000s
+2026-01-02 14:51:58,058 - DEBUG - Team your_agent: Bid=7.61, Budget=14.35, Time=0.000s
+2026-01-02 14:51:58,267 - DEBUG - Team budget_aware_bidder: Bid 15.63 in 0.000s
+2026-01-02 14:51:58,268 - DEBUG - Team budget_aware_bidder: Bid=15.63, Budget=17.12, Time=0.000s    
+2026-01-02 14:51:58,488 - DEBUG - Team random_bidder: Bid 1.21 in 0.000s
+2026-01-02 14:51:58,488 - DEBUG - Team random_bidder: Bid=1.21, Budget=60.00, Time=0.000s
+2026-01-02 14:51:58,707 - DEBUG - Team strategic_bidder: Bid 8.44 in 0.000s
+2026-01-02 14:51:58,708 - DEBUG - Team strategic_bidder: Bid=8.44, Budget=21.89, Time=0.000s        
+2026-01-02 14:51:58,926 - DEBUG - Team truthful_bidder: Bid 7.14 in 0.000s
+2026-01-02 14:51:58,926 - DEBUG - Team truthful_bidder: Bid=7.14, Budget=34.99, Time=0.000s
+2026-01-02 14:51:58,927 - INFO - Round 15: Auctioning item_7
+2026-01-02 14:51:58,927 - DEBUG - Validated bids: {'your_agent': 7.61, 'budget_aware_bidder': 15.63, 'random_bidder': 1.21, 'strategic_bidder': 8.44, 'truthful_bidder': 7.14}
+2026-01-02 14:51:58,927 - INFO - Winner: budget_aware_bidder, Price: 8.44
+2026-01-02 14:51:58,927 - INFO - Winner: budget_aware_bidder, Price: 8.44, Remaining budget: 8.68   
+2026-01-02 14:51:59,913 - INFO - ======== Game stage1_arenasimulator_game14 Complete ========       
+2026-01-02 14:51:59,913 - INFO - === Game Summary ===
+2026-01-02 14:51:59,913 - INFO - Rank 1: budget_aware_bidder | Utility: 34.66 | Items Won: 6 | Spent: 51.32 | Valuation: 85.98
+2026-01-02 14:51:59,914 - INFO - Rank 2: strategic_bidder | Utility: 16.27 | Items Won: 3 | Spent: 38.11 | Valuation: 54.38
+2026-01-02 14:51:59,914 - INFO - Rank 3: truthful_bidder | Utility: 8.78 | Items Won: 3 | Spent: 25.01 | Valuation: 33.79
+2026-01-02 14:51:59,914 - INFO - Rank 4: your_agent | Utility: 6.36 | Items Won: 3 | Spent: 45.65 | Valuation: 52.01
+2026-01-02 14:51:59,914 - INFO - Rank 5: random_bidder | Utility: 0.00 | Items Won: 0 | Spent: 0.00 | Valuation: 0.00
+  Winner: budget_aware_bidder (Utility: 34.66)    
+  Your Rank: 4/5 (Utility: 6.36, Items: 3, Spent: 45.65)
+
+--- Game 15/15 ---
+2026-01-02 14:51:59,915 - INFO - ======== Starting Game stage1_arenasimulator_game15 ========       
+2026-01-02 14:51:59,915 - INFO - Initializing game stage1_arenasimulator_game15
+2026-01-02 14:51:59,915 - INFO - Teams: ['your_agent', 'budget_aware_bidder', 'random_bidder', 'strategic_bidder', 'truthful_bidder']
+2026-01-02 14:51:59,915 - INFO - Generated valuations for 5 teams
+2026-01-02 14:51:59,915 - DEBUG - Item categories: High=['item_1', 'item_17', 'item_15', 'item_0', 'item_2', 'item_10'], Low=['item_13', 'item_5', 'item_7', 'item_14'], Mixed=['item_9', 'item_16', 'item_12', 'item_19', 'item_3', 'item_11', 'item_4', 'item_6', 'item_18', 'item_8']
+2026-01-02 14:51:59,916 - INFO - Auction sequence: ['item_16', 'item_13', 'item_14', 'item_7', 'item_17', 'item_10', 'item_8', 'item_2', 'item_4', 'item_1', 'item_12', 'item_6', 'item_11', 'item_15', 'item_19']
+2026-01-02 14:51:59,916 - INFO - Registering agent for team your_agent from C:\Users\ahayu\Desktop\Computer_Science\Year_D\Semester_A\Algorithmic Game Theory\Excersises\Pratical Ex\AGT-Bidding-competition\teams\team_yuvi\bidding_agent.py
+2026-01-02 14:51:59,917 - INFO - Successfully registered agent for team your_agent
+2026-01-02 14:51:59,918 - INFO - Registering agent for team budget_aware_bidder from C:\Users\ahayu\Desktop\Computer_Science\Year_D\Semester_A\Algorithmic Game Theory\Excersises\Pratical Ex\AGT-Bidding-competition\examples\budget_aware_bidder.py     
+2026-01-02 14:51:59,919 - INFO - Successfully registered agent for team budget_aware_bidder
+2026-01-02 14:51:59,919 - INFO - Registering agent for team random_bidder from C:\Users\ahayu\Desktop\Computer_Science\Year_D\Semester_A\Algorithmic Game Theory\Excersises\Pratical Ex\AGT-Bidding-competition\examples\random_bidder.py
+2026-01-02 14:51:59,920 - INFO - Successfully registered agent for team random_bidder
+2026-01-02 14:51:59,920 - INFO - Registering agent for team strategic_bidder from C:\Users\ahayu\Desktop\Computer_Science\Year_D\Semester_A\Algorithmic Game Theory\Excersises\Pratical Ex\AGT-Bidding-competition\examples\strategic_bidder.py
+2026-01-02 14:51:59,921 - INFO - Successfully registered agent for team strategic_bidder
+2026-01-02 14:51:59,921 - INFO - Registering agent for team truthful_bidder from C:\Users\ahayu\Desktop\Computer_Science\Year_D\Semester_A\Algorithmic Game Theory\Excersises\Pratical Ex\AGT-Bidding-competition\examples\truthful_bidder.py
+2026-01-02 14:51:59,921 - INFO - Successfully registered agent for team truthful_bidder
+2026-01-02 14:51:59,922 - INFO - Successfully initialized 5 agents
+2026-01-02 14:51:59,922 - INFO - === Round 1/15: Item item_16 ===
+2026-01-02 14:52:00,155 - DEBUG - Team your_agent: Bid 18.62 in 0.000s
+2026-01-02 14:52:00,155 - DEBUG - Team your_agent: Bid=18.62, Budget=60.00, Time=0.000s
+2026-01-02 14:52:00,375 - DEBUG - Team budget_aware_bidder: Bid 12.52 in 0.000s
+2026-01-02 14:52:00,375 - DEBUG - Team budget_aware_bidder: Bid=12.52, Budget=60.00, Time=0.000s    
+2026-01-02 14:52:00,588 - DEBUG - Team random_bidder: Bid 8.52 in 0.000s
+2026-01-02 14:52:00,588 - DEBUG - Team random_bidder: Bid=8.52, Budget=60.00, Time=0.000s
+2026-01-02 14:52:00,802 - DEBUG - Team strategic_bidder: Bid 1.76 in 0.000s
+2026-01-02 14:52:00,802 - DEBUG - Team strategic_bidder: Bid=1.76, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:01,009 - DEBUG - Team truthful_bidder: Bid 15.23 in 0.000s
+2026-01-02 14:52:01,011 - DEBUG - Team truthful_bidder: Bid=15.23, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:01,011 - INFO - Round 1: Auctioning item_16
+2026-01-02 14:52:01,011 - DEBUG - Validated bids: {'your_agent': 18.62, 'budget_aware_bidder': 12.52, 'random_bidder': 8.52, 'strategic_bidder': 1.76, 'truthful_bidder': 15.23}
+2026-01-02 14:52:01,011 - INFO - Winner: your_agent, Price: 15.23
+2026-01-02 14:52:01,011 - INFO - Winner: your_agent, Price: 15.23, Remaining budget: 44.77
+2026-01-02 14:52:02,044 - INFO - === Round 2/15: Item item_13 ===
+2026-01-02 14:52:02,241 - DEBUG - Team your_agent: Bid 1.04 in 0.000s
+2026-01-02 14:52:02,241 - DEBUG - Team your_agent: Bid=1.04, Budget=44.77, Time=0.000s
+2026-01-02 14:52:02,455 - DEBUG - Team budget_aware_bidder: Bid 3.21 in 0.000s
+2026-01-02 14:52:02,455 - DEBUG - Team budget_aware_bidder: Bid=3.21, Budget=60.00, Time=0.000s     
+2026-01-02 14:52:02,668 - DEBUG - Team random_bidder: Bid 7.32 in 0.000s
+2026-01-02 14:52:02,670 - DEBUG - Team random_bidder: Bid=7.32, Budget=60.00, Time=0.000s
+2026-01-02 14:52:02,886 - DEBUG - Team strategic_bidder: Bid 4.66 in 0.000s
+2026-01-02 14:52:02,887 - DEBUG - Team strategic_bidder: Bid=4.66, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:03,097 - DEBUG - Team truthful_bidder: Bid 4.76 in 0.000s
+2026-01-02 14:52:03,099 - DEBUG - Team truthful_bidder: Bid=4.76, Budget=60.00, Time=0.000s
+2026-01-02 14:52:03,099 - INFO - Round 2: Auctioning item_13
+2026-01-02 14:52:03,099 - DEBUG - Validated bids: {'your_agent': 1.04, 'budget_aware_bidder': 3.21, 'random_bidder': 7.32, 'strategic_bidder': 4.66, 'truthful_bidder': 4.76}
+2026-01-02 14:52:03,099 - INFO - Winner: random_bidder, Price: 4.76
+2026-01-02 14:52:03,099 - INFO - Winner: random_bidder, Price: 4.76, Remaining budget: 55.24        
+2026-01-02 14:52:04,071 - INFO - === Round 3/15: Item item_14 ===
+2026-01-02 14:52:04,286 - DEBUG - Team your_agent: Bid 7.50 in 0.000s
+2026-01-02 14:52:04,287 - DEBUG - Team your_agent: Bid=7.50, Budget=44.77, Time=0.000s
+2026-01-02 14:52:04,503 - DEBUG - Team budget_aware_bidder: Bid 2.81 in 0.000s
+2026-01-02 14:52:04,504 - DEBUG - Team budget_aware_bidder: Bid=2.81, Budget=60.00, Time=0.000s     
+2026-01-02 14:52:04,713 - DEBUG - Team random_bidder: Bid 0.87 in 0.000s
+2026-01-02 14:52:04,714 - DEBUG - Team random_bidder: Bid=0.87, Budget=55.24, Time=0.000s
+2026-01-02 14:52:04,931 - DEBUG - Team strategic_bidder: Bid 2.40 in 0.000s
+2026-01-02 14:52:04,931 - DEBUG - Team strategic_bidder: Bid=2.40, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:05,144 - DEBUG - Team truthful_bidder: Bid 1.85 in 0.000s
+2026-01-02 14:52:05,144 - DEBUG - Team truthful_bidder: Bid=1.85, Budget=60.00, Time=0.000s
+2026-01-02 14:52:05,144 - INFO - Round 3: Auctioning item_14
+2026-01-02 14:52:05,144 - DEBUG - Validated bids: {'your_agent': 7.5, 'budget_aware_bidder': 2.81, 'random_bidder': 0.87, 'strategic_bidder': 2.4, 'truthful_bidder': 1.85}
+2026-01-02 14:52:05,144 - INFO - Winner: your_agent, Price: 2.81
+2026-01-02 14:52:05,144 - INFO - Winner: your_agent, Price: 2.81, Remaining budget: 41.96
+2026-01-02 14:52:06,127 - INFO - === Round 4/15: Item item_7 ===
+2026-01-02 14:52:06,330 - DEBUG - Team your_agent: Bid 8.08 in 0.002s
+2026-01-02 14:52:06,330 - DEBUG - Team your_agent: Bid=8.08, Budget=41.96, Time=0.002s
+2026-01-02 14:52:06,569 - DEBUG - Team budget_aware_bidder: Bid 7.31 in 0.000s
+2026-01-02 14:52:06,570 - DEBUG - Team budget_aware_bidder: Bid=7.31, Budget=60.00, Time=0.000s     
+2026-01-02 14:52:06,884 - DEBUG - Team random_bidder: Bid 1.28 in 0.000s
+2026-01-02 14:52:06,884 - DEBUG - Team random_bidder: Bid=1.28, Budget=55.24, Time=0.000s
+2026-01-02 14:52:07,101 - DEBUG - Team strategic_bidder: Bid 3.07 in 0.000s
+2026-01-02 14:52:07,101 - DEBUG - Team strategic_bidder: Bid=3.07, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:07,312 - DEBUG - Team truthful_bidder: Bid 7.39 in 0.000s
+2026-01-02 14:52:07,312 - DEBUG - Team truthful_bidder: Bid=7.39, Budget=60.00, Time=0.000s
+2026-01-02 14:52:07,312 - INFO - Round 4: Auctioning item_7
+2026-01-02 14:52:07,312 - DEBUG - Validated bids: {'your_agent': 8.08, 'budget_aware_bidder': 7.31, 'random_bidder': 1.28, 'strategic_bidder': 3.07, 'truthful_bidder': 7.39}
+2026-01-02 14:52:07,312 - INFO - Winner: your_agent, Price: 7.39
+2026-01-02 14:52:07,312 - INFO - Winner: your_agent, Price: 7.39, Remaining budget: 34.57
+2026-01-02 14:52:08,292 - INFO - === Round 5/15: Item item_17 ===
+2026-01-02 14:52:08,500 - DEBUG - Team your_agent: Bid 17.03 in 0.000s
+2026-01-02 14:52:08,501 - DEBUG - Team your_agent: Bid=17.03, Budget=34.57, Time=0.000s
+2026-01-02 14:52:08,714 - DEBUG - Team budget_aware_bidder: Bid 9.53 in 0.000s
+2026-01-02 14:52:08,715 - DEBUG - Team budget_aware_bidder: Bid=9.53, Budget=60.00, Time=0.000s     
+2026-01-02 14:52:08,930 - DEBUG - Team random_bidder: Bid 10.37 in 0.000s
+2026-01-02 14:52:08,931 - DEBUG - Team random_bidder: Bid=10.37, Budget=55.24, Time=0.000s
+2026-01-02 14:52:09,144 - DEBUG - Team strategic_bidder: Bid 15.16 in 0.001s
+2026-01-02 14:52:09,144 - DEBUG - Team strategic_bidder: Bid=15.16, Budget=60.00, Time=0.001s       
+2026-01-02 14:52:09,355 - DEBUG - Team truthful_bidder: Bid 10.11 in 0.000s
+2026-01-02 14:52:09,355 - DEBUG - Team truthful_bidder: Bid=10.11, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:09,356 - INFO - Round 5: Auctioning item_17
+2026-01-02 14:52:09,356 - DEBUG - Validated bids: {'your_agent': 17.03, 'budget_aware_bidder': 9.53, 'random_bidder': 10.37, 'strategic_bidder': 15.16, 'truthful_bidder': 10.11}
+2026-01-02 14:52:09,356 - INFO - Winner: your_agent, Price: 15.16
+2026-01-02 14:52:09,356 - INFO - Winner: your_agent, Price: 15.16, Remaining budget: 19.41
+2026-01-02 14:52:10,326 - INFO - === Round 6/15: Item item_10 ===
+2026-01-02 14:52:10,526 - DEBUG - Team your_agent: Bid 19.17 in 0.000s
+2026-01-02 14:52:10,526 - DEBUG - Team your_agent: Bid=19.17, Budget=19.41, Time=0.000s
+2026-01-02 14:52:10,739 - DEBUG - Team budget_aware_bidder: Bid 15.70 in 0.000s
+2026-01-02 14:52:10,740 - DEBUG - Team budget_aware_bidder: Bid=15.70, Budget=60.00, Time=0.000s    
+2026-01-02 14:52:10,955 - DEBUG - Team random_bidder: Bid 9.95 in 0.000s
+2026-01-02 14:52:10,955 - DEBUG - Team random_bidder: Bid=9.95, Budget=55.24, Time=0.000s
+2026-01-02 14:52:11,167 - DEBUG - Team strategic_bidder: Bid 17.37 in 0.001s
+2026-01-02 14:52:11,168 - DEBUG - Team strategic_bidder: Bid=17.37, Budget=60.00, Time=0.001s       
+2026-01-02 14:52:11,379 - DEBUG - Team truthful_bidder: Bid 17.79 in 0.000s
+2026-01-02 14:52:11,379 - DEBUG - Team truthful_bidder: Bid=17.79, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:11,379 - INFO - Round 6: Auctioning item_10
+2026-01-02 14:52:11,379 - DEBUG - Validated bids: {'your_agent': 19.17, 'budget_aware_bidder': 15.7, 'random_bidder': 9.95, 'strategic_bidder': 17.37, 'truthful_bidder': 17.79}
+2026-01-02 14:52:11,379 - INFO - Winner: your_agent, Price: 17.79
+2026-01-02 14:52:11,381 - INFO - Winner: your_agent, Price: 17.79, Remaining budget: 1.62
+2026-01-02 14:52:12,352 - INFO - === Round 7/15: Item item_8 ===
+2026-01-02 14:52:12,553 - DEBUG - Team your_agent: Bid 1.62 in 0.000s
+2026-01-02 14:52:12,553 - DEBUG - Team your_agent: Bid=1.62, Budget=1.62, Time=0.000s
+2026-01-02 14:52:12,771 - DEBUG - Team budget_aware_bidder: Bid 6.00 in 0.000s
+2026-01-02 14:52:12,771 - DEBUG - Team budget_aware_bidder: Bid=6.00, Budget=60.00, Time=0.000s     
+2026-01-02 14:52:12,987 - DEBUG - Team random_bidder: Bid 2.84 in 0.000s
+2026-01-02 14:52:12,987 - DEBUG - Team random_bidder: Bid=2.84, Budget=55.24, Time=0.000s
+2026-01-02 14:52:13,198 - DEBUG - Team strategic_bidder: Bid 5.19 in 0.000s
+2026-01-02 14:52:13,198 - DEBUG - Team strategic_bidder: Bid=5.19, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:13,407 - DEBUG - Team truthful_bidder: Bid 2.03 in 0.000s
+2026-01-02 14:52:13,408 - DEBUG - Team truthful_bidder: Bid=2.03, Budget=60.00, Time=0.000s
+2026-01-02 14:52:13,408 - INFO - Round 7: Auctioning item_8
+2026-01-02 14:52:13,408 - WARNING - Team your_agent: Bid 1.62 exceeds budget 1.62, capping to budget
+2026-01-02 14:52:13,408 - DEBUG - Validated bids: {'your_agent': 1.62, 'budget_aware_bidder': 6.0, 'random_bidder': 2.84, 'strategic_bidder': 5.19, 'truthful_bidder': 2.03}
+2026-01-02 14:52:13,408 - WARNING - Teams with capped bids: ['your_agent']
+2026-01-02 14:52:13,408 - INFO - Winner: budget_aware_bidder, Price: 5.19
+2026-01-02 14:52:13,408 - INFO - Winner: budget_aware_bidder, Price: 5.19, Remaining budget: 54.81  
+2026-01-02 14:52:14,400 - INFO - === Round 8/15: Item item_2 ===
+2026-01-02 14:52:14,613 - DEBUG - Team your_agent: Bid 1.62 in 0.000s
+2026-01-02 14:52:14,614 - DEBUG - Team your_agent: Bid=1.62, Budget=1.62, Time=0.000s
+2026-01-02 14:52:14,829 - DEBUG - Team budget_aware_bidder: Bid 9.01 in 0.000s
+2026-01-02 14:52:14,829 - DEBUG - Team budget_aware_bidder: Bid=9.01, Budget=54.81, Time=0.000s     
+2026-01-02 14:52:15,044 - DEBUG - Team random_bidder: Bid 3.30 in 0.000s
+2026-01-02 14:52:15,044 - DEBUG - Team random_bidder: Bid=3.30, Budget=55.24, Time=0.000s
+2026-01-02 14:52:15,252 - DEBUG - Team strategic_bidder: Bid 11.21 in 0.000s
+2026-01-02 14:52:15,253 - DEBUG - Team strategic_bidder: Bid=11.21, Budget=60.00, Time=0.000s       
+2026-01-02 14:52:15,461 - DEBUG - Team truthful_bidder: Bid 19.54 in 0.000s
+2026-01-02 14:52:15,461 - DEBUG - Team truthful_bidder: Bid=19.54, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:15,462 - INFO - Round 8: Auctioning item_2
+2026-01-02 14:52:15,462 - WARNING - Team your_agent: Bid 1.62 exceeds budget 1.62, capping to budget
+2026-01-02 14:52:15,462 - DEBUG - Validated bids: {'your_agent': 1.62, 'budget_aware_bidder': 9.01, 'random_bidder': 3.3, 'strategic_bidder': 11.21, 'truthful_bidder': 19.54}
+2026-01-02 14:52:15,462 - WARNING - Teams with capped bids: ['your_agent']
+2026-01-02 14:52:15,462 - INFO - Winner: truthful_bidder, Price: 11.21
+2026-01-02 14:52:15,463 - INFO - Winner: truthful_bidder, Price: 11.21, Remaining budget: 48.79     
+2026-01-02 14:52:16,440 - INFO - === Round 9/15: Item item_4 ===
+2026-01-02 14:52:16,647 - DEBUG - Team your_agent: Bid 1.62 in 0.000s
+2026-01-02 14:52:16,649 - DEBUG - Team your_agent: Bid=1.62, Budget=1.62, Time=0.000s
+2026-01-02 14:52:16,861 - DEBUG - Team budget_aware_bidder: Bid 7.94 in 0.000s
+2026-01-02 14:52:16,862 - DEBUG - Team budget_aware_bidder: Bid=7.94, Budget=54.81, Time=0.000s     
+2026-01-02 14:52:17,085 - DEBUG - Team random_bidder: Bid 3.83 in 0.000s
+2026-01-02 14:52:17,085 - DEBUG - Team random_bidder: Bid=3.83, Budget=55.24, Time=0.000s
+2026-01-02 14:52:17,292 - DEBUG - Team strategic_bidder: Bid 2.17 in 0.000s
+2026-01-02 14:52:17,293 - DEBUG - Team strategic_bidder: Bid=2.17, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:17,502 - DEBUG - Team truthful_bidder: Bid 14.00 in 0.000s
+2026-01-02 14:52:17,503 - DEBUG - Team truthful_bidder: Bid=14.00, Budget=48.79, Time=0.000s        
+2026-01-02 14:52:17,503 - INFO - Round 9: Auctioning item_4
+2026-01-02 14:52:17,503 - WARNING - Team your_agent: Bid 1.62 exceeds budget 1.62, capping to budget
+2026-01-02 14:52:17,503 - DEBUG - Validated bids: {'your_agent': 1.62, 'budget_aware_bidder': 7.94, 'random_bidder': 3.83, 'strategic_bidder': 2.17, 'truthful_bidder': 14.0}
+2026-01-02 14:52:17,503 - WARNING - Teams with capped bids: ['your_agent']
+2026-01-02 14:52:17,504 - INFO - Winner: truthful_bidder, Price: 7.94
+2026-01-02 14:52:17,504 - INFO - Winner: truthful_bidder, Price: 7.94, Remaining budget: 40.85      
+2026-01-02 14:52:18,532 - INFO - === Round 10/15: Item item_1 ===
+2026-01-02 14:52:18,759 - DEBUG - Team your_agent: Bid 1.62 in 0.000s
+2026-01-02 14:52:18,760 - DEBUG - Team your_agent: Bid=1.62, Budget=1.62, Time=0.000s
+2026-01-02 14:52:18,983 - DEBUG - Team budget_aware_bidder: Bid 16.53 in 0.000s
+2026-01-02 14:52:18,983 - DEBUG - Team budget_aware_bidder: Bid=16.53, Budget=54.81, Time=0.000s    
+2026-01-02 14:52:19,202 - DEBUG - Team random_bidder: Bid 5.58 in 0.000s
+2026-01-02 14:52:19,203 - DEBUG - Team random_bidder: Bid=5.58, Budget=55.24, Time=0.000s
+2026-01-02 14:52:19,443 - DEBUG - Team strategic_bidder: Bid 10.77 in 0.000s
+2026-01-02 14:52:19,444 - DEBUG - Team strategic_bidder: Bid=10.77, Budget=60.00, Time=0.000s       
+2026-01-02 14:52:19,682 - DEBUG - Team truthful_bidder: Bid 16.80 in 0.000s
+2026-01-02 14:52:19,682 - DEBUG - Team truthful_bidder: Bid=16.80, Budget=40.85, Time=0.000s        
+2026-01-02 14:52:19,682 - INFO - Round 10: Auctioning item_1
+2026-01-02 14:52:19,682 - WARNING - Team your_agent: Bid 1.62 exceeds budget 1.62, capping to budget
+2026-01-02 14:52:19,682 - DEBUG - Validated bids: {'your_agent': 1.62, 'budget_aware_bidder': 16.53, 'random_bidder': 5.58, 'strategic_bidder': 10.77, 'truthful_bidder': 16.8}
+2026-01-02 14:52:19,683 - WARNING - Teams with capped bids: ['your_agent']
+2026-01-02 14:52:19,683 - INFO - Winner: truthful_bidder, Price: 16.53
+2026-01-02 14:52:19,683 - INFO - Winner: truthful_bidder, Price: 16.53, Remaining budget: 24.32     
+2026-01-02 14:52:20,666 - INFO - === Round 11/15: Item item_12 ===
+2026-01-02 14:52:20,870 - DEBUG - Team your_agent: Bid 1.62 in 0.000s
+2026-01-02 14:52:20,871 - DEBUG - Team your_agent: Bid=1.62, Budget=1.62, Time=0.000s
+2026-01-02 14:52:21,084 - DEBUG - Team budget_aware_bidder: Bid 4.89 in 0.000s
+2026-01-02 14:52:21,085 - DEBUG - Team budget_aware_bidder: Bid=4.89, Budget=54.81, Time=0.000s     
+2026-01-02 14:52:21,304 - DEBUG - Team random_bidder: Bid 5.06 in 0.000s
+2026-01-02 14:52:21,306 - DEBUG - Team random_bidder: Bid=5.06, Budget=55.24, Time=0.000s
+2026-01-02 14:52:21,515 - DEBUG - Team strategic_bidder: Bid 9.15 in 0.000s
+2026-01-02 14:52:21,515 - DEBUG - Team strategic_bidder: Bid=9.15, Budget=60.00, Time=0.000s        
+2026-01-02 14:52:21,732 - DEBUG - Team truthful_bidder: Bid 4.61 in 0.000s
+2026-01-02 14:52:21,732 - DEBUG - Team truthful_bidder: Bid=4.61, Budget=24.32, Time=0.000s
+2026-01-02 14:52:21,732 - INFO - Round 11: Auctioning item_12
+2026-01-02 14:52:21,732 - WARNING - Team your_agent: Bid 1.62 exceeds budget 1.62, capping to budget
+2026-01-02 14:52:21,733 - DEBUG - Validated bids: {'your_agent': 1.62, 'budget_aware_bidder': 4.89, 'random_bidder': 5.06, 'strategic_bidder': 9.15, 'truthful_bidder': 4.61}
+2026-01-02 14:52:21,733 - WARNING - Teams with capped bids: ['your_agent']
+2026-01-02 14:52:21,733 - INFO - Winner: strategic_bidder, Price: 5.06
+2026-01-02 14:52:21,733 - INFO - Winner: strategic_bidder, Price: 5.06, Remaining budget: 54.94     
+2026-01-02 14:52:22,777 - INFO - === Round 12/15: Item item_6 ===
+2026-01-02 14:52:22,977 - DEBUG - Team your_agent: Bid 0.94 in 0.000s
+2026-01-02 14:52:22,977 - DEBUG - Team your_agent: Bid=0.94, Budget=1.62, Time=0.000s
+2026-01-02 14:52:23,189 - DEBUG - Team budget_aware_bidder: Bid 8.79 in 0.000s
+2026-01-02 14:52:23,190 - DEBUG - Team budget_aware_bidder: Bid=8.79, Budget=54.81, Time=0.000s     
+2026-01-02 14:52:23,406 - DEBUG - Team random_bidder: Bid 0.95 in 0.000s
+2026-01-02 14:52:23,406 - DEBUG - Team random_bidder: Bid=0.95, Budget=55.24, Time=0.000s
+2026-01-02 14:52:23,618 - DEBUG - Team strategic_bidder: Bid 2.03 in 0.000s
+2026-01-02 14:52:23,618 - DEBUG - Team strategic_bidder: Bid=2.03, Budget=54.94, Time=0.000s        
+2026-01-02 14:52:23,837 - DEBUG - Team truthful_bidder: Bid 5.54 in 0.000s
+2026-01-02 14:52:23,837 - DEBUG - Team truthful_bidder: Bid=5.54, Budget=24.32, Time=0.000s
+2026-01-02 14:52:23,837 - INFO - Round 12: Auctioning item_6
+2026-01-02 14:52:23,837 - DEBUG - Validated bids: {'your_agent': 0.94, 'budget_aware_bidder': 8.79, 'random_bidder': 0.95, 'strategic_bidder': 2.03, 'truthful_bidder': 5.54}
+2026-01-02 14:52:23,838 - INFO - Winner: budget_aware_bidder, Price: 5.54
+2026-01-02 14:52:23,838 - INFO - Winner: budget_aware_bidder, Price: 5.54, Remaining budget: 49.27  
+2026-01-02 14:52:24,814 - INFO - === Round 13/15: Item item_11 ===
+2026-01-02 14:52:25,016 - DEBUG - Team your_agent: Bid 1.62 in 0.000s
+2026-01-02 14:52:25,018 - DEBUG - Team your_agent: Bid=1.62, Budget=1.62, Time=0.000s
+2026-01-02 14:52:25,228 - DEBUG - Team budget_aware_bidder: Bid 13.04 in 0.000s
+2026-01-02 14:52:25,228 - DEBUG - Team budget_aware_bidder: Bid=13.04, Budget=49.27, Time=0.000s    
+2026-01-02 14:52:25,436 - DEBUG - Team random_bidder: Bid 2.27 in 0.000s
+2026-01-02 14:52:25,436 - DEBUG - Team random_bidder: Bid=2.27, Budget=55.24, Time=0.000s
+2026-01-02 14:52:25,655 - DEBUG - Team strategic_bidder: Bid 3.14 in 0.000s
+2026-01-02 14:52:25,655 - DEBUG - Team strategic_bidder: Bid=3.14, Budget=54.94, Time=0.000s        
+2026-01-02 14:52:25,877 - DEBUG - Team truthful_bidder: Bid 18.79 in 0.000s
+2026-01-02 14:52:25,877 - DEBUG - Team truthful_bidder: Bid=18.79, Budget=24.32, Time=0.000s        
+2026-01-02 14:52:25,878 - INFO - Round 13: Auctioning item_11
+2026-01-02 14:52:25,878 - WARNING - Team your_agent: Bid 1.62 exceeds budget 1.62, capping to budget
+2026-01-02 14:52:25,878 - DEBUG - Validated bids: {'your_agent': 1.62, 'budget_aware_bidder': 13.04, 'random_bidder': 2.27, 'strategic_bidder': 3.14, 'truthful_bidder': 18.79}
+2026-01-02 14:52:25,878 - WARNING - Teams with capped bids: ['your_agent']
+2026-01-02 14:52:25,878 - INFO - Winner: truthful_bidder, Price: 13.04
+2026-01-02 14:52:25,878 - INFO - Winner: truthful_bidder, Price: 13.04, Remaining budget: 11.28     
+2026-01-02 14:52:26,874 - INFO - === Round 14/15: Item item_15 ===
+2026-01-02 14:52:27,076 - DEBUG - Team your_agent: Bid 1.62 in 0.000s
+2026-01-02 14:52:27,076 - DEBUG - Team your_agent: Bid=1.62, Budget=1.62, Time=0.000s
+2026-01-02 14:52:27,287 - DEBUG - Team budget_aware_bidder: Bid 14.68 in 0.000s
+2026-01-02 14:52:27,287 - DEBUG - Team budget_aware_bidder: Bid=14.68, Budget=49.27, Time=0.000s    
+2026-01-02 14:52:27,507 - DEBUG - Team random_bidder: Bid 11.93 in 0.000s
+2026-01-02 14:52:27,507 - DEBUG - Team random_bidder: Bid=11.93, Budget=55.24, Time=0.000s
+2026-01-02 14:52:27,726 - DEBUG - Team strategic_bidder: Bid 11.51 in 0.000s
+2026-01-02 14:52:27,726 - DEBUG - Team strategic_bidder: Bid=11.51, Budget=54.94, Time=0.000s       
+2026-01-02 14:52:27,945 - DEBUG - Team truthful_bidder: Bid 11.28 in 0.000s
+2026-01-02 14:52:27,946 - DEBUG - Team truthful_bidder: Bid=11.28, Budget=11.28, Time=0.000s        
+2026-01-02 14:52:27,946 - INFO - Round 14: Auctioning item_15
+2026-01-02 14:52:27,946 - WARNING - Team your_agent: Bid 1.62 exceeds budget 1.62, capping to budget
+2026-01-02 14:52:27,946 - DEBUG - Validated bids: {'your_agent': 1.62, 'budget_aware_bidder': 14.68, 'random_bidder': 11.93, 'strategic_bidder': 11.51, 'truthful_bidder': 11.28}
+2026-01-02 14:52:27,946 - WARNING - Teams with capped bids: ['your_agent']
+2026-01-02 14:52:27,946 - INFO - Winner: budget_aware_bidder, Price: 11.93
+2026-01-02 14:52:27,946 - INFO - Winner: budget_aware_bidder, Price: 11.93, Remaining budget: 37.34 
+2026-01-02 14:52:28,928 - INFO - === Round 15/15: Item item_19 ===
+2026-01-02 14:52:29,129 - DEBUG - Team your_agent: Bid 1.60 in 0.000s
+2026-01-02 14:52:29,129 - DEBUG - Team your_agent: Bid=1.60, Budget=1.62, Time=0.000s
+2026-01-02 14:52:29,343 - DEBUG - Team budget_aware_bidder: Bid 18.53 in 0.000s
+2026-01-02 14:52:29,343 - DEBUG - Team budget_aware_bidder: Bid=18.53, Budget=37.34, Time=0.000s    
+2026-01-02 14:52:29,556 - DEBUG - Team random_bidder: Bid 6.00 in 0.001s
+2026-01-02 14:52:29,556 - DEBUG - Team random_bidder: Bid=6.00, Budget=55.24, Time=0.001s
+2026-01-02 14:52:29,765 - DEBUG - Team strategic_bidder: Bid 0.57 in 0.000s
+2026-01-02 14:52:29,765 - DEBUG - Team strategic_bidder: Bid=0.57, Budget=54.94, Time=0.000s        
+2026-01-02 14:52:29,982 - DEBUG - Team truthful_bidder: Bid 10.20 in 0.000s
+2026-01-02 14:52:29,982 - DEBUG - Team truthful_bidder: Bid=10.20, Budget=11.28, Time=0.000s        
+2026-01-02 14:52:29,983 - INFO - Round 15: Auctioning item_19
+2026-01-02 14:52:29,983 - DEBUG - Validated bids: {'your_agent': 1.6, 'budget_aware_bidder': 18.53, 'random_bidder': 6.0, 'strategic_bidder': 0.57, 'truthful_bidder': 10.2}
+2026-01-02 14:52:29,983 - INFO - Winner: budget_aware_bidder, Price: 10.20
+2026-01-02 14:52:29,983 - INFO - Winner: budget_aware_bidder, Price: 10.20, Remaining budget: 27.14 
+2026-01-02 14:52:30,959 - INFO - ======== Game stage1_arenasimulator_game15 Complete ========       
+2026-01-02 14:52:30,960 - INFO - === Game Summary ===
+2026-01-02 14:52:30,960 - INFO - Rank 1: truthful_bidder | Utility: 20.41 | Items Won: 4 | Spent: 48.72 | Valuation: 69.13
+2026-01-02 14:52:30,960 - INFO - Rank 2: budget_aware_bidder | Utility: 18.21 | Items Won: 4 | Spent: 32.86 | Valuation: 51.07
+2026-01-02 14:52:30,960 - INFO - Rank 3: your_agent | Utility: 16.55 | Items Won: 5 | Spent: 58.38 | Valuation: 74.93
+2026-01-02 14:52:30,960 - INFO - Rank 4: strategic_bidder | Utility: 8.01 | Items Won: 1 | Spent: 5.06 | Valuation: 13.07
+2026-01-02 14:52:30,960 - INFO - Rank 5: random_bidder | Utility: 2.84 | Items Won: 1 | Spent: 4.76 | Valuation: 7.60
+  Winner: truthful_bidder (Utility: 20.41)        
+  Your Rank: 3/5 (Utility: 16.55, Items: 5, Spent: 58.38)
+
+
+================================================================================
+SIMULATION SUMMARY (15 games)
+================================================================================
+
+YOUR AGENT PERFORMANCE:
+  Win Rate: 46.7% (7/15)
+  Average Rank: 2.13
+  Average Utility: 16.35
+  Average Items Won: 4.3
+  Average Budget Spent: 51.11
+  Utility Range: [4.60, 27.29]
+
+────────────────────────────────────────────────────────────────────────────────
+
+OPPONENT COMPARISON:
+Agent                      Avg Utility     Wins   Win Rate
+------------------------- ------------ -------- ----------
+budget_aware_bidder              16.09        4      26.7%
+random_bidder                     4.66        0       0.0%     
+
+================================================================================
+
+PERFORMANCE ASSESSMENT:
+  ⚠ Performance below baseline - review your approach
+  ✓ Strong utility generation
+
+================================================================================
