@@ -2,19 +2,25 @@
 AGT Competition - Student Agent Template
 ========================================
 
-Team Name: [YOUR TEAM NAME]
+Team Name: [RAY]
 Members: 
-  - [Student 1 Name and ID]
-  - [Student 2 Name and ID]
-  - [Student 3 Name and ID]
+  - [Ron Tzvick 322293390]
+  - [Yuval Aharoni 208832782]
+  - [Ayelet Shmaya 213527237]
 
 Strategy Description:
-[Brief description of your bidding strategy]
+1. If valuation ≤ 0, budget == 0, or no rounds remain → bid 0.
+2. Compute remaining rounds and budget per round.
+3. If rich or panic-spending → bid ≈ valuation (or conservatively for very low values).
+4. Else, bid ≈ valuation if current value ≥ average future value; otherwise bid conservatively.
+5. In the last rounds, override to bid more aggressively.
+6. Cap bid at valuation and remaining budget.
 
 Key Features:
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
+- Bet aggressively on high-value items when budget allows
+- Try to make other bidders exhaust their budgets
+- Final rounds: go all-in if budget remains
+- Look at the average of remaining valuations to decide bid level
 """
 
 from typing import Dict, List
@@ -27,8 +33,8 @@ class BiddingAgent:
     This template provides the required interface and helpful structure.
     Replace the TODO sections with your own strategy implementation.
     """
-    
-    def __init__(self, team_id: str, valuation_vector: Dict[str, float], 
+
+    def __init__(self, team_id: str, valuation_vector: Dict[str, float],
                  budget: float, opponent_teams: List[str]):
         """
         Initialize your agent at the start of each game.
@@ -56,18 +62,25 @@ class BiddingAgent:
         self.opponent_teams = opponent_teams
         self.utility = 0
         self.items_won = []
-        
+
         # Game state tracking
         self.rounds_completed = 0
         self.total_rounds = 15  # Always 15 rounds per game
-        
-      
+
+        ################# Custom State Variables #################
+        # Keeps track of remaining valuations:
         self.remaining_vals = list(valuation_vector.values())
+
+        # Opponents' budgets tracking
         self.opponents_budgets = {opp: 60.0 for opp in opponent_teams}
+
+        # High-value items seen counter (Assumption)
         self.high_items_seen = 0
+
+        # Market aggressiveness factor (can be adjusted)
         self.market_aggressiveness = 1.0
 
-    def _update_available_budget(self, item_id: str, winning_team: str, 
+    def _update_available_budget(self, item_id: str, winning_team: str,
                                  price_paid: float):
         """
         Internal method to update budget after auction.
@@ -81,8 +94,8 @@ class BiddingAgent:
         if winning_team == self.team_id:
             self.budget -= price_paid
             self.items_won.append(item_id)
-    
-    def update_after_each_round(self, item_id: str, winning_team: str, 
+
+    def update_after_each_round(self, item_id: str, winning_team: str,
                                 price_paid: float):
         """
         Called after each auction round with public information.
@@ -109,18 +122,21 @@ class BiddingAgent:
         self._update_available_budget(item_id, winning_team, price_paid)
         self.rounds_completed += 1
         # ============================================================
+        # Remove the auctioned item's valuation from remaining_vals
         my_valuation = self.valuation_vector[item_id]
         if my_valuation in self.remaining_vals:
             self.remaining_vals.remove(my_valuation)
-            
+
+        # Update winner budget
         if winning_team in self.opponents_budgets:
             self.opponents_budgets[winning_team] = max(0.0, self.opponents_budgets[winning_team] - price_paid)
 
+        # Track high-value items seen
         if price_paid > 11:
             self.high_items_seen += 1
-        
+
         return True
-    
+
     def bidding_function(self, item_id: str) -> float:
         """
         MAIN METHOD: Decide how much to bid for the current item.
@@ -152,54 +168,46 @@ class BiddingAgent:
         my_valuation = self.valuation_vector.get(item_id, 0)
         rounds_left = self.total_rounds - self.rounds_completed
         # Early exit if no value or no budget
-        if my_valuation <= 0 or self.budget <= 0.01 or rounds_left <= 0:
+        if my_valuation <= 0 or self.budget < 0.01 or rounds_left <= 0:
             return 0.0
-        
-        # ============================================================
-        # TODO: IMPLEMENT YOUR BIDDING STRATEGY HERE
-        # ============================================================
-        
-            
+
         budget_per_round = self.budget / rounds_left
-        is_rich = budget_per_round > 2.0 
+        is_rich = budget_per_round > 2.0
         is_panic_spend = (self.rounds_completed > 7 and self.budget > 25)
-        bid = 0.0
-        if is_panic_spend or is_rich:             
+        if is_panic_spend or is_rich:
             if my_valuation > 1:
-                bid = my_valuation*0.99
+                bid = my_valuation * 0.99
             else:
-                bid = 0.0
-                
+                bid = my_valuation * 0.5
+        # if not rich and not panic spend
         else:
-        
-            
             if len(self.remaining_vals) > 0:
+                # Calculate average future valuation of remaining items
                 avg_future = sum(self.remaining_vals) / len(self.remaining_vals)
             else:
                 avg_future = 5
-      
+            # If my valuation is higher than average future, bid aggressively
+            # Otherwise, bid conservatively
             if my_valuation >= avg_future:
-                bid = my_valuation * 0.9
-            elif my_valuation >= avg_future * 0.6:
-                bid = my_valuation * 0.5
+                bid = my_valuation * 0.99
             else:
-                bid = 0.0
+                bid = my_valuation * 0.5
+
+        # Final rounds - go all in if we can afford it
         if rounds_left <= 3 and self.budget > 0:
-            
-             if my_valuation > 1:
+            if my_valuation > 1:
                 bid = min(self.budget, my_valuation)
-          
-             if rounds_left == 1 and my_valuation > 0:
-                 bid = self.budget
+
+            if rounds_left == 1 and my_valuation > 0:
+                bid = self.budget
         # ============================================================
         # END OF STRATEGY IMPLEMENTATION
         # ============================================================
         bid = min(bid, my_valuation)
         # Ensure bid is valid (non-negative and within budget)
         bid = max(0.0, min(bid, self.budget))
-        
+
         return float(bid)
-   
 
 # ====================================================================
 # NOTES AND TIPS
