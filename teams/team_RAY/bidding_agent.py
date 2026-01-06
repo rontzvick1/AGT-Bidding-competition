@@ -76,6 +76,7 @@ class BiddingAgent:
 
         # High-value items seen counter (Assumption)
         self.high_items_seen = 0
+        self.low_items_seen = 0
 
         # Market aggressiveness factor (can be adjusted)
         self.market_aggressiveness = 1.0
@@ -132,9 +133,11 @@ class BiddingAgent:
             self.opponents_budgets[winning_team] = max(0.0, self.opponents_budgets[winning_team] - price_paid)
 
         # Track high-value items seen
-        if price_paid > 11:
+        if price_paid > 13 and my_valuation > 10:
             self.high_items_seen += 1
 
+        if price_paid < 8 and my_valuation <= 10:
+            self.low_items_seen += 1
         return True
 
     def bidding_function(self, item_id: str) -> float:
@@ -179,7 +182,12 @@ class BiddingAgent:
                 bid = my_valuation * 0.99
             else:
                 bid = my_valuation * 0.5
-        # if not rich and not panic spend
+        # if seen many high-value items, bid aggressively on high-value ones
+        elif self.high_items_seen > 5 and my_valuation > 10:
+            bid = my_valuation * 0.99
+        elif self.low_items_seen > 3 and my_valuation < 10:
+            bid = my_valuation * 0.99
+
         else:
             if len(self.remaining_vals) > 0:
                 # Calculate average future valuation of remaining items
@@ -207,4 +215,4 @@ class BiddingAgent:
         # Ensure bid is valid (non-negative and within budget)
         bid = max(0.0, min(bid, self.budget))
 
-        return float(bid)
+        return round(float(bid), 2)
